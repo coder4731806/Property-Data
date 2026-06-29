@@ -1,4 +1,4 @@
-# Alethia price model
+# Alethia.au price model
 
 Predicts the expected sale price of a Queensland residential property plus a 90%
 price band and a confidence level, from the same fields a customer enters when
