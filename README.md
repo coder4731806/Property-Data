@@ -54,7 +54,7 @@ A TypeScript mapping of suburbs to their regional groupings, used by the Alethia
 
 ## Running the price models
 
-### Setup (once)
+### Setup 
 
 ```bash
 cd price_model
@@ -62,14 +62,6 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Retrain from scratch
-
-Reads the Excel files, retrains all four models, and regenerates everything in `models/`,
-`charts/`, and `reports/`.
-
-```bash
-python scripts/run_all.py
-```
 
 ### One-off estimate from the command line
 
@@ -82,33 +74,6 @@ python scripts/predict.py \
   --bathrooms 2 \
   --car-spaces 1 \
   --land-size 405
-```
-
-### Local prediction API
-
-```bash
-# from the price_model/ directory
-uvicorn scripts.predict_service:app --host 127.0.0.1 --port 8008
-```
-
-`POST /estimate` with a JSON body returns the expected price, band, confidence, and
-comparable sales. `GET /health` reports which models loaded.
-
-Example response:
-
-```json
-{
-  "expected_price": 1843000,
-  "price_low": 1267000,
-  "price_high": 2178000,
-  "confidence_score": 80,
-  "confidence_label": "High",
-  "recommended_model": "lightgbm",
-  "models": { "linear": {}, "lightgbm": {}, "knn": {}, "ebm": {} },
-  "comparable_sales": [
-    { "address": "...", "bedrooms": 3, "sold_price": 1820000, "date_sold": "2026-01-22" }
-  ]
-}
 ```
 
 ### Model performance on the held-out test set (4,213 most recent sales)
@@ -133,7 +98,7 @@ inside **[Alethia](https://alethia.au)**.
 ### What Alethia is
 
 Alethia is a real estate intelligence platform built for the Australian market. The name
-comes from the Greek word for *truth* — the goal is to put transparent, data-backed
+comes from the Greek word for *transparency* — the goal is to put transparent, data-backed
 property intelligence in front of buyers, sellers, and agents rather than hiding the
 methodology behind a black-box number.
 
