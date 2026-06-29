@@ -1,0 +1,92 @@
+{
+  "trained_at": "2026-06-23 10:07:37",
+  "n_train": 23878,
+  "n_test": 4213,
+  "test_cutoff_date": "2026-05-11 00:00:00",
+  "feature_names": [
+    "bedrooms",
+    "bathrooms",
+    "car_spaces",
+    "land_size_m2",
+    "building_size_m2",
+    "land_size_missing",
+    "building_size_missing",
+    "lat",
+    "lng",
+    "suburb_te",
+    "postcode_te",
+    "region_te",
+    "type_house",
+    "type_townhouse",
+    "type_apartment",
+    "type_villa",
+    "type_acreage",
+    "type_land",
+    "type_other"
+  ],
+  "global_log_mean": 13.91700360855384,
+  "knn_cols": [
+    "address",
+    "suburb",
+    "property_type",
+    "lat",
+    "lng",
+    "bedrooms",
+    "bathrooms",
+    "car_spaces",
+    "land_size_m2",
+    "building_size_m2",
+    "sold_price",
+    "date_sold"
+  ],
+  "metrics": {
+    "linear": {
+      "n": 4213,
+      "mae": 193858.45805894045,
+      "rmse": 357444.45231555233,
+      "mape_pct": 15.946776732684231,
+      "median_ape_pct": 11.962757984013107,
+      "within_10pct": 42.368858295751245,
+      "within_20pct": 71.06574887253738,
+      "r2_log": 0.7155314520650575,
+      "coverage_90_pct": 92.54687870875861,
+      "median_rel_interval_width_pct": 80.81511838517028
+    },
+    "lightgbm": {
+      "n": 4213,
+      "mae": 144704.8664078132,
+      "rmse": 259426.75024960178,
+      "mape_pct": 11.914483986350012,
+      "median_ape_pct": 8.620290147765939,
+      "within_10pct": 55.75599335390458,
+      "within_20pct": 82.008070258723,
+      "r2_log": 0.8453106419246715,
+      "coverage_90_pct": 88.4168051269879,
+      "median_rel_interval_width_pct": 47.70852308213413
+    },
+    "knn": {
+      "n": 4213,
+      "mae": 186861.2887817819,
+      "rmse": 326320.35740898416,
+      "mape_pct": 15.935820155656174,
+      "median_ape_pct": 11.106374506819755,
+      "within_10pct": 45.92926655589841,
+      "within_20pct": 72.15760740564919,
+      "r2_log": 0.7452239225941868,
+      "coverage_90_pct": 81.4146688820318,
+      "median_rel_interval_width_pct": 53.28510029378798
+    },
+    "ebm": {
+      "n": 4213,
+      "mae": 161815.90418389233,
+      "rmse": 283598.599967291,
+      "mape_pct": 13.623485804774345,
+      "median_ape_pct": 10.157703178280997,
+      "within_10pct": 49.29978637550439,
+      "within_20pct": 77.52195585093757,
+      "r2_log": 0.8140104595867429,
+      "coverage_90_pct": 87.63351530975552,
+      "median_rel_interval_width_pct": 56.05020724348101
+    }
+  }
+}

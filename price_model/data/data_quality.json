@@ -1,0 +1,32 @@
+{
+  "rows_raw": 33399,
+  "dupe_ids_removed": 5021,
+  "removed_abs_bounds": 5,
+  "removed_pct_trim": 282,
+  "rows_clean": 28091,
+  "suburbs": 774,
+  "no_geo_match_filled": 44,
+  "price_percentiles_pretrim": {
+    "0.5": 315000.0,
+    "1": 390000.0,
+    "5": 590000.0,
+    "25": 820000.0,
+    "50": 1030000.0,
+    "75": 1400000.0,
+    "95": 2385299.999999996,
+    "99": 4000000.0,
+    "99.5": 4986725.000000024
+  },
+  "date_min": "2025-06-23 00:00:00",
+  "date_max": "2026-06-23 00:00:00",
+  "land_missing_pct": 23.7,
+  "building_missing_pct": 67.7,
+  "type_counts": {
+    "house": 17683,
+    "apartment": 6863,
+    "townhouse": 2992,
+    "acreage": 266,
+    "villa": 231,
+    "other": 56
+  }
+}

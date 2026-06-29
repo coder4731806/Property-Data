@@ -1,0 +1,21 @@
+# Alethia price model - pinned to the versions the artifacts were trained with.
+# Train on your Mac with the same versions so the saved .joblib files load cleanly,
+# or just retrain locally (python scripts/run_all.py) to regenerate them.
+
+# core ML
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.7.2
+scipy==1.15.3
+lightgbm==4.6.0
+interpret-core==0.7.8
+joblib==1.5.3
+
+# data prep + charts
+openpyxl==3.1.5
+matplotlib==3.10.9
+
+# local inference API
+fastapi==0.138.0
+uvicorn[standard]==0.49.0
+pydantic>=2,<3
