@@ -28,7 +28,7 @@ spaces, land size, building size, sold price, and date sold.
 | `logan_ipswich.xlsx` | Logan and Ipswich |
 | `regional_qld.xlsx` | Regional Queensland |
 
-The combined dataset is ~28,000 sold records covering roughly June 2025 to June 2026. The
+The combined dataset is 28,000 sold records covering roughly June 2025 to June 2026. The
 sample skews toward premium and coastal stock (inner Brisbane, Gold Coast, Sunshine Coast),
 so the median sold price in the data (~$1.03M) is above the QLD-wide median. All prices
 are in AUD.
