@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# private training data / infra - never ship
+price_model/data/clean_full.csv
+price_model/models_full/knn.joblib
+price_model/models_full/_work/
+price_model/cf_artifacts/d1/sold_records.sql
+price_model/cf_artifacts/d1/sold_records.sql.gz
+price_model/cf_artifacts/d1/.wrangler/
