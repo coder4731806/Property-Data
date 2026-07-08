@@ -1,9 +1,0 @@
-[09:56:53] loading data
-[09:56:54] train=23878 (core=21013, val=2865) test=4213 cutoff=2026-05-11 00:00:00
-[09:56:54] training Linear
-[09:56:54] training LightGBM quantile
-[09:56:55]   lgbm q=0.05: best_iter=827
-[09:56:57]   lgbm q=0.5: best_iter=1299
-[09:56:58]   lgbm q=0.95: best_iter=648
-[09:56:58] training KNN comparables
-[09:57:00] training EBM

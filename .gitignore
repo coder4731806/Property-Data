@@ -4,3 +4,8 @@ __pycache__/
 *.pyo
 .DS_Store
 *.joblib
+
+price_model/data/*.csv
+price_model/cf_artifacts/
+price_model/models_full/
+price_model/reports_full/

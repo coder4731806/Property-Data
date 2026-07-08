@@ -137,8 +137,13 @@ class KnnComparables:
 
     def fit(self, df, y_log):
         d = df.reset_index(drop=True).copy()
-        self.land_med_ = float(pd.to_numeric(d["land_size_m2"], errors="coerce").median())
-        self.bld_med_ = float(pd.to_numeric(d["building_size_m2"], errors="coerce").median())
+
+        def _med(col):
+            v = float(pd.to_numeric(d[col], errors="coerce").median())
+            return 0.0 if np.isnan(v) else v   # all-missing column -> neutral 0
+
+        self.land_med_ = _med("land_size_m2")
+        self.bld_med_ = _med("building_size_m2")
         self.lat_med_ = float(d["lat"].median()); self.lng_med_ = float(d["lng"].median())
         self.bed_med_ = float(pd.to_numeric(d["bedrooms"], errors="coerce").median())
         self.bath_med_ = float(pd.to_numeric(d["bathrooms"], errors="coerce").median())

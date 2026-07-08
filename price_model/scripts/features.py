@@ -57,6 +57,9 @@ class FeaturePipeline:
 
         # ---- numeric imputation medians ----
         self.medians_ = {c: float(np.nanmedian(pd.to_numeric(d[c], errors="coerce"))) for c in NUMERIC_FEATURES}
+        # a column that is entirely missing (e.g. building size in the db-sourced
+        # data) gets a neutral 0.0 impute; its missing-flag carries the signal
+        self.medians_ = {c: (0.0 if np.isnan(v) else v) for c, v in self.medians_.items()}
         # suburb centroid fallback
         self.lat_med_, self.lng_med_ = float(d["lat"].median()), float(d["lng"].median())
 
