@@ -1,18 +1,6 @@
 """
 Retrain the four model families on the full sales history, index-adjusted.
 
-Differences from train.py (which stays untouched):
-  * input is data/clean_full.csv -- ~660k rows, 2008-2026
-  * every price is converted to base-month dollars with data/price_index.json
-    before training, so 2010..2026 sales all contribute to what attributes are
-    worth while the index carries the market trend
-  * models predict CURRENT-dollar prices directly (base month = newest month)
-  * sample weights decay with age (half-life --half-life-months) so recent
-    sales still dominate
-  * evaluation converts predictions BACK to at-sale dollars, so metrics are
-    honest and directly comparable with the old 28k-row run
-  * outputs go to models_full/ and reports_full/ (does not clobber models/)
-
 Run:
     python train_full.py                          # everything
     python train_full.py --models linear lightgbm
