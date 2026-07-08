@@ -1,13 +1,4 @@
 """
-Monthly price index from the FULL sold history (2008-2026).
-
-This is how old sales stay useful instead of being discarded: the index captures
-the market's time trend, every historical price is converted to "current
-dollars" before model training, and the models then only have to learn what a
-property's attributes are worth, not what year it was. A raw date feature in a
-tree model cannot do this job because trees cannot extrapolate past the last
-training date.
-
 Method: two-way fixed effects estimated by alternating projections.
     log(price) = group_effect(suburb x type) + month_effect + noise
 Iterating "month effect = mean residual by month" against "group effect = mean
